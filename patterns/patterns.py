@@ -2,28 +2,28 @@ def patter_1(n):
     for i in range(n):
         for j in range(n):
             print("*", end=" ")
-        print("| i = ", i, "| j = ", j)
+        print()
 
 
 def patter_2(n):
     for i in range(1, n):
         for j in range(i):
             print("*", end="")
-        print(i)
+        print()
 
 
 def patter_3(n):
     for i in range(1, n):
         for j in range(1, i + 1):
             print(j, end="")
-        print("| i = ", i, "| j = ", j)
+        print()
 
 
 def patter_4(n):
     for i in range(1, n):
         for j in range(1, i + 1):
             print(i, end="")
-        print("| i = ", i, "| j = ", j)
+        print()
 
 
 def pattern_5(n):
@@ -103,9 +103,6 @@ def pattern_10(n):
         print()
 
 
-pattern_10(5)
-
-
 def pattern_11(n):
     start = 1
     for i in range(n):
@@ -116,4 +113,28 @@ def pattern_11(n):
         print()
 
 
-pattern_11(5)
+def pattern_12(n):
+    space = 2 * (n - 1)
+    for i in range(1, n + 1):
+        # print("=======> n value ", n)
+        # numbers
+        for j in range(1, i + 1):
+            print(j, end="")
+
+        # spaces
+        for j in range(space):
+            print(" ", end="")
+        # numbers
+        for j in range(i, 0, -1):
+            print(j, end="")
+        print()
+        space -= 2
+
+
+def pattern_13(n):
+    num = 1
+    for i in range(1, n + 1):
+        for j in range(i):
+            print(num, end=" ")
+            num += 1
+        print()
