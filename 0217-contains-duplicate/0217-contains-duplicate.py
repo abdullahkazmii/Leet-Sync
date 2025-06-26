@@ -1,10 +1,19 @@
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
-        count = {}
-        for i in range(len(nums)):
-            count[nums[i]] = count.get(nums[i],0)+1
-            if count[nums[i]] > 1:
+        # nums.sort()
+        # for i in range(len(nums) - 1):
+        #     if nums[i] == nums[i + 1]:
+        #         return True
+        # return False
+
+        freq = {}
+        for num in nums:
+            if num in freq:
                 return True
+            freq[num]=1
         return False
+
         
+        
+
         
